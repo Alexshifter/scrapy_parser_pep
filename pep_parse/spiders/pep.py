@@ -7,7 +7,7 @@ from pep_parse.items import PepParseItem
 class PepSpider(scrapy.Spider):
     name = 'pep'
     allowed_domains = ['peps.python.org']
-    start_urls = ['https://' + domain + '/' for domain in allowed_domains]
+    start_urls = [f'https://{domain}/' for domain in allowed_domains]
 
     def parse(self, response):
         links = list(

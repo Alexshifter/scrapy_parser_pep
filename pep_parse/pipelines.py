@@ -2,12 +2,14 @@ import csv
 from collections import defaultdict
 from datetime import datetime, timezone
 
-from pep_parse.settings import BASE_DIR, RESULTS_DIR
+from pep_parse.settings import BASE_DIR, RESULTS
 
 
 class PepParsePipeline:
     def __init__(self):
-        self.results_dir = BASE_DIR / RESULTS_DIR
+
+        self.results_dir = BASE_DIR / RESULTS
+        self.results_dir.mkdir(parents=True, exist_ok=True)
 
     def open_spider(self, spider):
         self.status_summary = defaultdict(int)
