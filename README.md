@@ -40,4 +40,4 @@ cd results
 ## Основные технологии
 Python 3.9.13, Scrapy 2.5.1
 ## Автор
-[Alexey Pakaev](https://github.com/Alexshifter/)
+(https://github.com/Alexshifter/)
